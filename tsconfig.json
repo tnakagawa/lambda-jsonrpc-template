@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // 出力される JavaScript のターゲットバージョン
+    "module": "NodeNext", // Node.js の ESM 解釈に合わせる（import/export をそのまま使う）
+    "moduleResolution": "NodeNext", // NodeNext のモジュール解決ルールを使う（.js 拡張子必須など）
+    "allowImportingTsExtensions": true, // TypeScript ファイルを import できるようにする（.ts 拡張子必須）
+    "strict": true, // 厳格モード（型チェックを最大限に強化）
+    "esModuleInterop": true, // CommonJS のデフォルトエクスポートを ESM 風に扱えるようにする
+    "skipLibCheck": true, // node_modules 内の型チェックをスキップして高速化
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字の不一致をエラーにする（Linux 互換）
+    "allowJs": false, // JavaScript ファイルをコンパイル対象にしない
+    "resolveJsonModule": true, // JSON ファイルを import できるようにする
+    "types": ["node", "vitest"], // Node.js の型（process, Buffer など）と Vitest の型（describe, test など）を読み込む
+    "noEmit": true // TypeScript の出力を生成しない（ts-node/tsx 実行前提）
+  },
+  "include": ["src", "test"] // コンパイル対象のフォルダ
+}
